@@ -19,6 +19,18 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        use: [
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 8192, // In bytes, if the file is greater than this size, it will be served as a separate file
+                    name: 'images/[name].[ext]', // Output path and file name format
+                },
+            },
+        ],
+    },
     ],
   },
   module: {
