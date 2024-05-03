@@ -1,3 +1,5 @@
+import img2 from '../imgs/img2.png';
+
 export function loadHome() {
     const contentDiv = document.getElementById("content");
 
@@ -15,7 +17,7 @@ export function loadHome() {
 
     const homeImg = document.createElement("img");
     homeImg.classList.add("home-img");
-    homeImg.src = "../imgs/img2.png";
+    homeImg.src = img2;
 
     homeTitle.appendChild(homeSubtitle);
     home.appendChild(homeTitle);

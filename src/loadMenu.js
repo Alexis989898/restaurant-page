@@ -1,3 +1,8 @@
+import img1 from '../imgs/img1.png';
+import img2 from '../imgs/img2.png';
+import img3 from '../imgs/img3.png';
+import img4 from '../imgs/img4.png';
+
 export function loadMenu() {
     const contentDiv = document.getElementById("content");
     const menu = document.createElement("div");
@@ -22,10 +27,10 @@ export function loadMenu() {
     }
 
     const dishes = [
-        { imgSrc: "../imgs/img1.png", dishName: "Delicious Boat" },
-        { imgSrc: "../imgs/img2.png", dishName: "Great Table Of Sushi" },
-        { imgSrc: "../imgs/img3.png", dishName: "Cool Soup" },
-        { imgSrc: "../imgs/img4.png", dishName: "Small Cute Boat" }
+        { imgSrc: img1, dishName: "Delicious Boat" },
+        { imgSrc: img2, dishName: "Great Table Of Sushi" },
+        { imgSrc: img3, dishName: "Cool Soup" },
+        { imgSrc: img4, dishName: "Small Cute Boat" }
     ];
 
     dishes.forEach(({ imgSrc, dishName }) => {
