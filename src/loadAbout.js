@@ -24,10 +24,10 @@ with us? We'd love to hear from you! Get in touch using any of the following met
     contactTxt.textContent = " 📞 Phone: For immediate assistance or to place an order over \
 the phone, give us a call at [123-456-7890]. Our friendly sushi enthusiasts are always \
 ready to chat! \
-\n \
+\n \n \
 📧 Email: Feel like typing? Shoot us an email at [info@sillysushi.com]. Whether it's \
 a reservation request, feedback, or a sushi joke, we're all ears! \
-\n \
+\n \n \
 🏢 Visit Us: If you're in the neighborhood, why not drop by and say hello? You can \
 find us at [123 Sushi Street, Sushiville, CA]. Our doors are always open to fellow sushi\
 lovers!";

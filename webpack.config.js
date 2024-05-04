@@ -3,11 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanPlugin } = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
   entry: {
     index: './src/index.js',
     loadHome: './src/loadHome.js',
-    loadMenu: './src/loadMenu.js'
+    loadMenu: './src/loadMenu.js',
+    loadAbout: './src/loadAbout.js'
   },
   module: {
     rules: [
@@ -16,25 +16,17 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         use: [
-            {
-                loader: 'url-loader',
-                options: {
-                    limit: 8192, // In bytes, if the file is greater than this size, it will be served as a separate file
-                    name: 'images/[name].[ext]', // Output path and file name format
-                },
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/', // Output path for images in the dist folder
             },
+          },
         ],
-    },
-    ],
-  },
-  module: {
-    rules: [
+      },
       {
         test: /\.html$/i,
         loader: "html-loader",
@@ -43,12 +35,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'Output Management',
-        template: 'src/index.html'
+      title: 'Output Management',
+      template: 'src/index.html'
     }),
   ],
   output: {
-    filename: 'main.js',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true

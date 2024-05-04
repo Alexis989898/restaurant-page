@@ -1,4 +1,4 @@
-import img2 from '../imgs/img2.png';
+import img2 from './imgs/img2.png';
 
 export function loadHome() {
     const contentDiv = document.getElementById("content");
